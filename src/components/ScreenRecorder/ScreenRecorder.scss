@@ -1,0 +1,179 @@
+#ScreenRecorder.screen-recorder-component {
+
+
+    // position: fixed;
+    // left: 0%;
+    // top: 50%;
+    // transform: translate(0%, -50%);
+
+    transition: all 0.2s ease;
+    color: white;
+    margin: auto;
+
+    .container {
+        min-height: 4rem;
+        width: 24rem;
+        background-color: orange;
+        background-color: #282c34;
+        padding: 0.8rem;
+        border-radius: 0.4rem 0 0.4rem 0.4rem;
+        display: flex;
+        align-items: center;
+        // flex-direction: column;
+        justify-content: space-around;
+        z-index: 1;
+        position: relative;
+        transition: all 0.2s ease;
+
+        margin: auto;
+
+        .icons-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4rem;
+            width: 4rem;
+            margin: 0.4rem;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: #3a3f4a;
+            }
+        }
+
+        .play-pause {
+            .recording {
+
+                #outer {
+                    animation: throb infinite ease-in-out 1.5s;
+                }
+
+                #inner {
+                    fill: red;
+                    stroke: red;
+                    animation: throb infinite ease-in-out 1.5s;
+                }
+
+                @keyframes throb {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+
+                }
+
+
+
+
+            }
+        }
+
+
+
+        .setting {
+            position: relative;
+
+            .setting-dialogue {
+                position: absolute;
+                left: 100%;
+                top: 0%;
+                background-color: #282c34;
+                padding: 0.4rem;
+                border-radius: 0.4rem;
+                min-width: 20rem;
+                max-width: max-content;
+
+                .options {
+                    margin: 0.4rem;
+                    padding: 0.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: #3a3f4a;
+                    }
+
+                    .header {
+                        width: max-content;
+                    }
+
+                    .option-carousal {
+                        display: flex;
+                        align-content: center;
+                        gap: 0.8rem;
+
+                        .arrow-left,
+                        .arrow-right {
+                            &:hover {
+                                transition: all 0.2s ease;
+
+                                path {
+                                    transition: all 0.2s ease;
+                                    fill: white
+                                }
+                            }
+                        }
+
+                        .arrow-left {
+                            transform: rotate(90deg);
+                        }
+
+                        .arrow-right {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+
+                hr {
+                    border: 1px solid gray;
+                    width: 70%;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .icons {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            background-color: gray;
+            height: 6rem;
+            width: 2.4rem;
+            margin: 0;
+            border-radius: 0 0.4rem 0.4rem 0;
+            padding-left: 0.4rem;
+            z-index: 0;
+
+            &:hover {
+                background-color: rgb(151, 151, 151);
+            }
+        }
+
+    }
+
+
+    .parent-div {
+        position: relative;
+
+        .child-div {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+        }
+    }
+}
